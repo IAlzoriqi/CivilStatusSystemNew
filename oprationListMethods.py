@@ -43,23 +43,23 @@ class OprationMethodsIdentificationCard:
         IdentificationCardList.pop(index)
 
     @staticmethod
-    def updateOneCard(self, index):
+    def updateOneCard(IdentificationCard, index):
         '''
         دالة تعديل بطاقة من قائمة البطائق الشخصية عن طريق الاندكس
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
         '''
         IdentificationCardList[index] = {
-            "ID": self.ID,  # تعديل الرقم الوطني
-            "firstname": self.firstname,  # تعديل الاسم الاول
-            "fathername": self.fathername,  # تعديل اسم اللأب
-            "grandfathername": self.grandfathername,  # تعديل اسم الجد
-            "familyname": self.familyname,  # تعديل اسم العائلة
-            "datebirth": self.datebirth,  # تعديل تاريخ الميلاد
-            "gender": self.gender,  # تعديل الجنس
-            "placebirth": self.placebirth,  # تعديل تاريخ الميلاد
-            "bloodtype": self.bloodtype,  # تعديل نوع الدم
-            "release": self.releasedate,  # تعديل تاريخ الاصدار
-            "expiry": self.expirydate,  # تعديل تاريخ الانتهاء
+            "ID": IdentificationCard.ID,  # تعديل الرقم الوطني
+            "firstname": IdentificationCard.firstname,  # تعديل الاسم الاول
+            "fathername": IdentificationCard.fathername,  # تعديل اسم اللأب
+            "grandfathername": IdentificationCard.grandfathername,  # تعديل اسم الجد
+            "familyname": IdentificationCard.familyname,  # تعديل اسم العائلة
+            "datebirth": IdentificationCard.datebirth,  # تعديل تاريخ الميلاد
+            "gender": IdentificationCard.gender,  # تعديل الجنس
+            "placebirth": IdentificationCard.placebirth,  # تعديل تاريخ الميلاد
+            "bloodtype": IdentificationCard.bloodtype,  # تعديل نوع الدم
+            "release": IdentificationCard.releasedate,  # تعديل تاريخ الاصدار
+            "expiry": IdentificationCard.expirydate,  # تعديل تاريخ الانتهاء
 
         }
         print("Done Update Data")
@@ -142,23 +142,22 @@ class OprationMethodsFamilyCard:
         FamilyCardList.pop(index)
 
     @staticmethod
-    def updateOneCard(self, index):
+    def updateOneCard(FamilyCard, index):
         '''
         دالة تعديل بطاقة من قائمة البطائق العائلية عن طريق الاندكس
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
         '''
         FamilyCardList[index] = {
-            "ID": self.ID,  # تعديل الرقم الوطني
-            "firstname": self.firstname,
-            "fathername": self.fathername,
-            "grandfathername": self.grandfathername,
-            "familyname": self.familyname,
-            "wifename": self.wifename,
-            "city": self.city,
-            "directorate": self.directorate,
-            "street": self.street,
-            "releasedate": self.releasedate,
-
+            "ID": FamilyCard.ID,
+            "firstname": FamilyCard.firstname,
+            "fathername": FamilyCard.fathername,
+            "grandfathername": FamilyCard.grandfathername,
+            "familyname": FamilyCard.familyname,
+            "wifename": FamilyCard.wifename,
+            "city": FamilyCard.city,
+            "directorate": FamilyCard.directorate,
+            "street": FamilyCard.street,
+            "releasedate": FamilyCard.releasedate,
         }
         print("Done Update Data")
 
@@ -170,7 +169,7 @@ class OprationMethodsDeathCertificate:
     """
 
     @staticmethod
-    def saveNewCard(self):
+    def saveNewCard(DeathCertificate):
         '''
         دالة حفظ  بطاقة جديدة  لقائمة  بطائق الوفة
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
@@ -181,16 +180,16 @@ class OprationMethodsDeathCertificate:
 
 
 
-                "ID": self.ID,
-                "firstname": self.firstname,
-                "fathername": self.fathername,
-                "grandfathername": self.grandfathername,
-                "familyname": self.familyname,
-                "mothername": self.mothername,
-                "IC_ID": self.IC_ID,
-                "datedeath": self.datedeath,
-                "placedath": self.placedath,
-                "releasedate": self.releasedate,
+                "ID": DeathCertificate.ID,
+                "firstname": DeathCertificate.firstname,
+                "fathername": DeathCertificate.fathername,
+                "grandfathername": DeathCertificate.grandfathername,
+                "familyname": DeathCertificate.familyname,
+                "mothername": DeathCertificate.mothername,
+                "IC_ID": DeathCertificate.IC_ID,
+                "datedeath": DeathCertificate.datedeath,
+                "placedath": DeathCertificate.placedath,
+                "releasedate": DeathCertificate.releasedate,
 
             }
         )
@@ -219,23 +218,24 @@ class OprationMethodsDeathCertificate:
         print("Done Delete Card")
 
     @staticmethod
-    def updateOneCard(self, index):
+    def updateOneCard(DeathCertificate, index):
         '''
         دالة تعديل بطاقة من قائمة بطائق الوفاة عن طريق الاندكس
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
         '''
         DeathCertificateList[index] = {
 
-            "ID": self.ID,
-            "firstname": self.firstname,
-            "fathername": self.fathername,
-            "grandfathername": self.grandfathername,
-            "familyname": self.familyname,
-            "mothername": self.mothername,
-            "IC_ID": self.IC_ID,
-            "datedeath": self.datedeath,
-            "placedath": self.placedath,
-            "releasedate": self.releasedate,
+            "ID": DeathCertificate.ID,
+            "firstname": DeathCertificate.firstname,
+            "fathername": DeathCertificate.fathername,
+            "grandfathername": DeathCertificate.grandfathername,
+            "familyname": DeathCertificate.familyname,
+            "mothername": DeathCertificate.mothername,
+            "IC_ID": DeathCertificate.IC_ID,
+            "datedeath": DeathCertificate.datedeath,
+            "placedath": DeathCertificate.placedath,
+            "releasedate": DeathCertificate.releasedate,
+
 
         }
         print("Done Update Data")
@@ -249,7 +249,7 @@ class OprationMethodsBirthCertificate:
 
     """
     @staticmethod
-    def saveNewCard(self):
+    def saveNewCard(BirthCertificate):
         '''
         دالة حفظ بطاقة ميلاد جديدة  
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
@@ -260,16 +260,16 @@ class OprationMethodsBirthCertificate:
 
 
 
-                "ID": self.ID,
-                "firstname": self.firstname,
-                "fathername": self.fathername,
-                "grandfathername": self.grandfathername,
-                "familyname": self.familyname,
-                "mothername": self.mothername,
-                "motherID": self.motherID,
-                "fatherID": self.fatherID,
+                "ID": BirthCertificate.ID,
+                "firstname": BirthCertificate.firstname,
+                "fathername": BirthCertificate.fathername,
+                "grandfathername": BirthCertificate.grandfathername,
+                "familyname": BirthCertificate.familyname,
+                "mothername": BirthCertificate.mothername,
+                "motherID": BirthCertificate.motherID,
+                "fatherID": BirthCertificate.fatherID,
 
-                "releasedate": self.releasedate,
+                "releasedate": BirthCertificate.releasedate,
 
             }
         )
@@ -297,7 +297,7 @@ class OprationMethodsBirthCertificate:
         print("Done Delete Card")
 
     @staticmethod
-    def updateOneCard(self, index):
+    def updateOneCard(BirthCertificate, index):
         '''
         دالة تعديل بطاقة من قائمة بطائق الميلاد عن طريق الاندكس
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
@@ -305,16 +305,16 @@ class OprationMethodsBirthCertificate:
         BirthCertificateList[index] = {
 
 
-            "ID": self.ID,
-            "firstname": self.firstname,
-            "fathername": self.fathername,
-            "grandfathername": self.grandfathername,
-            "familyname": self.familyname,
-            "mothername": self.mothername,
-            "motherID": self.motherID,
-            "fatherID": self.fatherID,
+            "ID": BirthCertificate.ID,
+            "firstname": BirthCertificate.firstname,
+            "fathername": BirthCertificate.fathername,
+            "grandfathername": BirthCertificate.grandfathername,
+            "familyname": BirthCertificate.familyname,
+            "mothername": BirthCertificate.mothername,
+            "motherID": BirthCertificate.motherID,
+            "fatherID": BirthCertificate.fatherID,
 
-            "releasedate": self.releasedate,
+            "releasedate": BirthCertificate.releasedate,
 
         }
         print("Done Update Data")
@@ -327,7 +327,7 @@ class OprationMethodsPrivateCard:
     '''
 
     @staticmethod
-    def saveNewCard(self):
+    def saveNewCard(PrivateCard):
         '''
         دالة حفظ  بطاقة جديدة  لقائمة  بطائق الخاصة
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
@@ -338,13 +338,13 @@ class OprationMethodsPrivateCard:
 
 
 
-                "ID": self.ID,
-                "firstname": self.firstname,
-                "fathername": self.fathername,
-                "grandfathername": self.grandfathername,
-                "familyname": self.familyname,
-                "place": self.place,
-                "releasedate": self.releasedate,
+                "ID": PrivateCard.ID,
+                "firstname": PrivateCard.firstname,
+                "fathername": PrivateCard.fathername,
+                "grandfathername": PrivateCard.grandfathername,
+                "familyname": PrivateCard.familyname,
+                "place": PrivateCard.place,
+                "releasedate": PrivateCard.releasedate,
 
             }
         )
@@ -371,27 +371,20 @@ class OprationMethodsPrivateCard:
         print("Done Delete Card")
 
     @staticmethod
-    def updateOneCard(self, index):
+    def updateOneCard(PrivateCard, index):
         '''
         دالة تعديل بطاقة من قائمة البطائق الخاصة عن طريق الاندكس
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
         '''
         PrivateCardList[index] = {
-
-
-
-
-
-            "ID": self.ID,
-            "firstname": self.firstname,
-            "fathername": self.fathername,
-            "grandfathername": self.grandfathername,
-            "familyname": self.familyname,
-            "place": self.place,
-            "releasedate": self.releasedate,
-
-
-        }
+            "ID": PrivateCard.ID,
+            "firstname": PrivateCard.firstname,
+            "fathername": PrivateCard.fathername,
+            "grandfathername": PrivateCard.grandfathername,
+            "familyname": PrivateCard.familyname,
+            "place": PrivateCard.place,
+            "releasedate": PrivateCard.releasedate,
+            }
         print("Done Update Data")
 
 # كلاس عمليات الحفظ والتعديل والاضافة لبطائق العسكرية
@@ -411,9 +404,6 @@ class OprationMethodsMilitaryCard:
         '''
         MilitaryCardList.append(
             {
-
-
-
                 "ID": MethodsMilitary.ID,
                 "firstname": MethodsMilitary.firstname,
                 "fathername": MethodsMilitary.fathername,
@@ -447,7 +437,7 @@ class OprationMethodsMilitaryCard:
         print("Done Delete Card")
 
     @staticmethod
-    def updateOneCard(self, index):
+    def updateOneCard(MethodsMilitary, index):
         '''
         دالة تعديل بطاقة من قائمة البطائق العسكرية عن طريق الاندكس
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
@@ -458,13 +448,13 @@ class OprationMethodsMilitaryCard:
 
 
 
-            "ID": self.ID,
-            "firstname": self.firstname,
-            "fathername": self.fathername,
-            "grandfathername": self.grandfathername,
-            "familyname": self.familyname,
-            "releasedate": self.releasedate,
-            "expirydate": self.expirydate
+            "ID": MethodsMilitary.ID,
+            "firstname": MethodsMilitary.firstname,
+            "fathername": MethodsMilitary.fathername,
+            "grandfathername": MethodsMilitary.grandfathername,
+            "familyname": MethodsMilitary.familyname,
+            "releasedate": MethodsMilitary.releasedate,
+            "expirydate": MethodsMilitary.expirydate
 
 
         }
