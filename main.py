@@ -39,7 +39,7 @@ def CheckTypeMilitarylServicessCard(noTypeInput):
 
             m.PrintCard()  # استداء دالة طباقة البطاقة الجديدة
 
-            # استداء دالة حفظ البطاقة الى ائمة البطائق
+            #  استداء دالة حفظ البطاقة الى قائمة البطائق الخاصة
             OprationMethodsPrivateCard.saveNewCard(m)
 
         elif noOpration == 2:
@@ -58,6 +58,11 @@ def CheckTypeMilitarylServicessCard(noTypeInput):
             m = PrivateCard(firstname, fathername,
                             grandfathername, familyname, place)
             m.PrintCard()
+            '''
+             استداء دالة تعديل البيانات  البطاقة من  قائمة البطائق الخاصة 
+              عن طريق الاندكس المدخل من قبل المستخدم
+
+            '''
 
             OprationMethodsPrivateCard.updateOneCard(p, index)
 
@@ -67,7 +72,8 @@ def CheckTypeMilitarylServicessCard(noTypeInput):
 
             index = int(input("Enter index user delet Card : "))
 
-            OprationMethodsPrivateCard.deleteOneCard(index)
+            OprationMethodsPrivateCard.deleteOneCard(
+                index)  # استدعاء دالة حذف بطاقة خاصة
 
         elif noOpration == 4:
 
@@ -95,12 +101,13 @@ def CheckTypeMilitarylServicessCard(noTypeInput):
             m = MilitaryCard(firstname, fathername,
                              grandfathername, familyname, side)
             m.PrintCard()
+            #  استداء دالة حفظ البطاقة الى قائمة البطائق العسكرية
             OprationMethodsMilitaryCard.saveNewCard(m)
         elif noOpration == 2:
 
             # print(data[0]["IdentificationCard"])
 
-            # استدعاء دالة عرض كل البطائق الخاصة
+            # استدعاء دالة عرض كل البطائق العسكرية
             OprationMethodsMilitaryCard.reviewAllCard()
             index = int(input("Enter index user updata data : "))
 
@@ -113,17 +120,23 @@ def CheckTypeMilitarylServicessCard(noTypeInput):
             m = MilitaryCard(firstname, fathername,
                              grandfathername, familyname, side)
             m.PrintCard()
+            #  استداء دالة تعديل البيانات  البطاقة من  قائمة البطائق العسكرية  عن طريق الاندكس المدخل من قبل المستخدم
+            '''
+             استداء دالة تعديل البيانات  البطاقة من  قائمة البطائق العسكرية 
+              عن طريق الاندكس المدخل من قبل المستخدم
 
+            '''
             OprationMethodsMilitaryCard.updateOneCard(m, index)
 
         elif noOpration == 3:
 
-            # استدعاء دالة عرض كل البطائق الخاصة
+            # استدعاء دالة عرض كل البطائق العسكرية
             OprationMethodsMilitaryCard.reviewAllCard()
 
             index = int(input("Enter index user delet Card : "))
 
-            OprationMethodsMilitaryCard.deleteOneCard(index)
+            OprationMethodsMilitaryCard.deleteOneCard(
+                index)  # استدعاء دالة حذف بطاقة عسكرية
 
         elif noOpration == 4:
             # استدعاء دالة عرض كل البطائق الخاصة
@@ -158,6 +171,7 @@ def CheckTypeCivilServicessCard(noTypeInput):
                                    datebirth, gender, placebirth, bloodtype)
 
             p.PrintCard()
+            #  استداء دالة حفظ البطاقة الى قائمة البطائق الشخصية
             OprationMethodsIdentificationCard.saveNewCard(p)
 
         elif noOpration == 2:
@@ -178,6 +192,12 @@ def CheckTypeCivilServicessCard(noTypeInput):
                                    datebirth, gender, placebirth, bloodtype)
 
             p.PrintCard()
+            #  استداء دالة تعديل البيانات  البطاقة من  قائمة البطائق الشخصية  عن طريق الاندكس المدخل من قبل المستخدم
+            '''
+             استداء دالة تعديل البيانات  البطاقة من  قائمة البطائق الشخصية 
+              عن طريق الاندكس المدخل من قبل المستخدم
+
+            '''
             OprationMethodsIdentificationCard.updateOneCard(p, index)
         elif noOpration == 3:
 
@@ -186,7 +206,8 @@ def CheckTypeCivilServicessCard(noTypeInput):
 
             index = int(input("Enter index user delet Card : "))
 
-            OprationMethodsIdentificationCard.deleteOneCard(index)
+            OprationMethodsIdentificationCard.deleteOneCard(
+                index)  # استدعاء دالة حذف بطاقة شخصية
 
         elif noOpration == 4:
 
@@ -221,6 +242,7 @@ def CheckTypeCivilServicessCard(noTypeInput):
             f = FamilyCard(firstname, fathername, grandfathername,
                            familyname, wifename, city, directorate, street)
             f.PrintCard()
+            #  استداء دالة حفظ البطاقة الى قائمة البطائق العائلية
             OprationMethodsFamilyCard.saveNewCard(f)
         elif noOpration == 2:
             # استدعاء دالة عرض كل البطائق العائلية
@@ -237,6 +259,11 @@ def CheckTypeCivilServicessCard(noTypeInput):
             f = FamilyCard(firstname, fathername, grandfathername,
                            familyname, wifename, city, directorate, street)
             f.PrintCard()
+            '''
+             استداء دالة تعديل البيانات  البطاقة من  قائمة البطائق العائلية 
+              عن طريق الاندكس المدخل من قبل المستخدم
+
+            '''
             OprationMethodsFamilyCard.updateOneCard(f, index)
         elif noOpration == 3:
             # استدعاء دالة عرض كل البطائق العائلية
@@ -244,7 +271,8 @@ def CheckTypeCivilServicessCard(noTypeInput):
 
             index = int(input("Enter index user delet Card : "))
 
-            OprationMethodsFamilyCard.deleteOneCard(index)
+            OprationMethodsFamilyCard.deleteOneCard(
+                index)  # استدعاء دالة حذف بطاقة عائلية
         elif noOpration == 4:
             # استدعاء دالة عرض كل البطائق العائلية
             OprationMethodsFamilyCard.reviewAllCard()
@@ -278,6 +306,7 @@ def CheckTypeCivilServicessCard(noTypeInput):
                                  grandfathername, familyname, mothername, IC_ID,
                                  datedeath, placedath, socialstatus)
             d.PrintCard()
+            #  استداء دالة حفظ البطاقة الى قائمة بطائق الوفاة
             OprationMethodsDeathCertificate.saveNewCard(d)
         elif noOpration == 2:
             # استدعاء دالة عرض كل بطائق الوفاة
@@ -298,6 +327,11 @@ def CheckTypeCivilServicessCard(noTypeInput):
                                  grandfathername, familyname, mothername, IC_ID,
                                  datedeath, placedath, socialstatus)
             d.PrintCard()
+            '''
+             استداء دالة تعديل البيانات  البطاقة من  قائمة شهائد الوفاة 
+              عن طريق الاندكس المدخل من قبل المستخدم
+
+            '''
             OprationMethodsDeathCertificate.updateOneCard(d, index)
         elif noOpration == 3:
             # استدعاء دالة عرض كل بطائق الوفاة
@@ -305,7 +339,8 @@ def CheckTypeCivilServicessCard(noTypeInput):
 
             index = int(input("Enter index user delet Card : "))
 
-            OprationMethodsDeathCertificate.deleteOneCard(index)
+            OprationMethodsDeathCertificate.deleteOneCard(
+                index)  # استدعاء دالة حذف شهادو  وفاة
         elif noOpration == 4:
             # استدعاء دالة عرض كل بطائق الوفاة
             OprationMethodsDeathCertificate.reviewAllCard()
@@ -334,11 +369,28 @@ def CheckTypeCivilServicessCard(noTypeInput):
                                  grandfathername, familyname, mothername, fatherID,
                                  motherID)
             d.PrintCard()
+            #  استداء دالة حفظ البطاقة الى قائمة شهادة الميلاد
             OprationMethodsBirthCertificate.saveNewCard(d)
         elif noOpration == 2:
-            # استدعاء دالة عرض كل بطائق الميلاد
+            # استدعاء دالة عرض كل شهادة الميلاد
             OprationMethodsBirthCertificate.reviewAllCard()
+
             index = int(input("Enter index user updata data : "))
+            firstname = str(input("Enter first name :"))
+            fathername = str(input("Enter father name :"))
+            grandfathername = str(input("Enter grandfather name :"))
+            familyname = str(input("Enter family name :"))
+            mothername = str(input("Enter mother name :"))
+            motherID = str(input("Enter the mother Identification Card ID :"))
+            fatherID = str(input("Enter the father Identification Card ID :"))
+            d = BirthCertificate(firstname, fathername,
+                                 grandfathername, familyname, mothername, fatherID,
+                                 motherID)
+            '''
+             استداء دالة تعديل البيانات  البطاقة من  قائمة شهائد الميلاد 
+              عن طريق الاندكس المدخل من قبل المستخدم
+
+            '''
             OprationMethodsBirthCertificate.updateOneCard(d, index)
         elif noOpration == 3:
             # استدعاء دالة عرض كل بطائق الميلاد
@@ -346,7 +398,8 @@ def CheckTypeCivilServicessCard(noTypeInput):
 
             index = int(input("Enter index user delet Card : "))
 
-            OprationMethodsBirthCertificate.deleteOneCard(index)
+            OprationMethodsBirthCertificate.deleteOneCard(
+                index)  # استدعاء دالة حذف شهادة ميلاد
         elif noOpration == 4:
             # استدعاء دالة عرض كل بطائق الميلاد
             OprationMethodsBirthCertificate.reviewAllCard()
