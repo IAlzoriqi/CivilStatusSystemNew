@@ -421,6 +421,7 @@ def CheckTypeCard(noTypeInput):
 
         """)
         noTypeInputssss = int(input("Enter No : "))
+
         CheckTypeCivilServicessCard(noTypeInputssss)
 
     if noTypeInput == 2:
@@ -446,27 +447,29 @@ def Welcome():
 
 
         """)
+
     noTypeInputs = int(input("Enter no type card: "))
+    # استدعاء الدالة ويلكم وهي تعتبر الدالة الرئيسية  والتي يبداء النظام منها
     CheckTypeCard(noTypeInputs)
 
 
-# if __name__ == "__main__":
-#     for i in data:
-#         print(i, data[i])
 
-while True:
+if __name__== "__main__":
+    while True:  # دوارة لاتاحت الاضافة والتعديل والحذف وعدم الخروج من النظام بسبب التنفيذ لأول مره
 
-    print("""
-        ***** Welcome to the Civil Status Cards Service *****
-        Enter number (1) to ingress System
-        Enter number (2) to Exit
+        print("""
+            ***** Welcome to the Civil Status Cards Service *****
+            Enter number (1) to ingress System
+            Enter number (2) to Exit
 
 
 
-        """)
-    ingressType = int(input("Enter no type card: "))
+            """)
 
-    if ingressType == 1:
-        Welcome()
-    else:
-        break
+        # ادخال رقم لتحقق من الدخول لنظام او الخروج منه
+        ingressType = int(input("Enter no : "))
+
+        if ingressType == 1:  # التحقق من الرقم المدخل
+            Welcome()  # استدعاء الدالة ويلكم وهي تعتبر الدالة الرئيسية  والتي يبداء النظام منها
+        else:
+            break

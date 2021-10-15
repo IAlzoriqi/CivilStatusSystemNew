@@ -13,6 +13,7 @@ DeathCertificateList = []
 
 BirthCertificateList = []
 
+#one class {update(object type card , index) , delete(index) , review() , save(object type card)}
 
 class OprationMethodsIdentificationCard:
 
@@ -41,6 +42,7 @@ class OprationMethodsIdentificationCard:
 
         '''
         IdentificationCardList.pop(index)
+        print("Done Delete")
 
     @staticmethod
     def updateOneCard(IdentificationCard, index):
@@ -459,3 +461,13 @@ class OprationMethodsMilitaryCard:
 
         }
         print("Done Update Data")
+
+
+
+
+
+
+
+
+
+
