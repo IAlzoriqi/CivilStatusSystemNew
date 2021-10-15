@@ -14,12 +14,8 @@ DeathCertificateList = []
 BirthCertificateList = []
 
 
-#  كلاس  عمليات الحفظ والتعديل والاضافة للبطائق الشخصية
-
-
 class OprationMethodsIdentificationCard:
 
-    # IdentificationCardList = []
     '''
     كلاس  عمليات الحفظ والتعديل والاضافة للبطائق الشخصية
     '''
@@ -77,17 +73,17 @@ class OprationMethodsIdentificationCard:
 
         IdentificationCardList.append(
             {
-                "ID":    self.ID,
-                "firstname":    self.firstname,
-                "fathername":    self.fathername,
-                "grandfathername":    self.grandfathername,
-                "familyname": self.familyname,
-                "datebirth": self.datebirth,
-                "gender": self.gender,
-                "placebirth": self.placebirth,
-                "bloodtype": self.bloodtype,
-                "release": self.releasedate,
-                "expiry": self.expirydate,
+                "ID":    IdentificationCard.ID,
+                "firstname":    IdentificationCard.firstname,
+                "fathername":    IdentificationCard.fathername,
+                "grandfathername":    IdentificationCard.grandfathername,
+                "familyname": IdentificationCard.familyname,
+                "datebirth": IdentificationCard.datebirth,
+                "gender": IdentificationCard.gender,
+                "placebirth": IdentificationCard.placebirth,
+                "bloodtype": IdentificationCard.bloodtype,
+                "release": IdentificationCard.releasedate,
+                "expiry": IdentificationCard.expirydate,
 
             }
         )
@@ -101,7 +97,7 @@ class OprationMethodsFamilyCard:
     '''
 
     @staticmethod
-    def saveNewCard(self):
+    def saveNewCard(FamilyCard):
         '''
         دالة حفظ بطاقة عائلية جديدة  
         الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
@@ -109,16 +105,16 @@ class OprationMethodsFamilyCard:
         '''
         FamilyCardList.append(
             {
-                "ID": self.ID,
-                "firstname": self.firstname,
-                "fathername": self.fathername,
-                "grandfathername": self.grandfathername,
-                "familyname": self.familyname,
-                "wifename": self.wifename,
-                "city": self.city,
-                "directorate": self.directorate,
-                "street": self.street,
-                "releasedate": self.releasedate,
+                "ID": FamilyCard.ID,
+                "firstname": FamilyCard.firstname,
+                "fathername": FamilyCard.fathername,
+                "grandfathername": FamilyCard.grandfathername,
+                "familyname": FamilyCard.familyname,
+                "wifename": FamilyCard.wifename,
+                "city": FamilyCard.city,
+                "directorate": FamilyCard.directorate,
+                "street": FamilyCard.street,
+                "releasedate": FamilyCard.releasedate,
 
             }
         )
@@ -323,12 +319,20 @@ class OprationMethodsBirthCertificate:
         }
         print("Done Update Data")
 
-# كلاس عمليات الحفظ والتعديل والاضافة لبطائق الخاصة
-
 
 class OprationMethodsPrivateCard:
+
+    '''
+    كلاس عمليات الحفظ والتعديل والاضافة لبطائق الخاصة
+    '''
+
     @staticmethod
     def saveNewCard(self):
+        '''
+        دالة حفظ  بطاقة جديدة  لقائمة  بطائق الخاصة
+        الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
+
+        '''
         PrivateCardList.append(
             {
 
@@ -394,20 +398,29 @@ class OprationMethodsPrivateCard:
 
 
 class OprationMethodsMilitaryCard:
+    '''
+    كلاس عمليات الحفظ والتعديل والاضافة لبطائق الخاصة
+    '''
+
     @staticmethod
     def saveNewCard(MethodsMilitary):
+        '''
+        دالة حفظ  بطاقة جديدة  لقائمة  بطائق العسكرية
+        الدالة ستاتيك لذالك تستدعى بدون انشاء اوبجكت
+
+        '''
         MilitaryCardList.append(
             {
 
 
 
-                "ID": self.ID,
-                "firstname": self.firstname,
-                "fathername": self.fathername,
-                "grandfathername": self.grandfathername,
-                "familyname": self.familyname,
-                "releasedate": self.releasedate,
-                "expirydate": self.expirydate
+                "ID": MethodsMilitary.ID,
+                "firstname": MethodsMilitary.firstname,
+                "fathername": MethodsMilitary.fathername,
+                "grandfathername": MethodsMilitary.grandfathername,
+                "familyname": MethodsMilitary.familyname,
+                "releasedate": MethodsMilitary.releasedate,
+                "expirydate": MethodsMilitary.expirydate
 
             }
         )
